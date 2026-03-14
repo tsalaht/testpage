@@ -1,0 +1,127 @@
+.hero {
+  position: relative;
+  background: linear-gradient(145deg, #004b63, #0093c7);
+  color: #ffffff;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 520px;
+}
+
+.hero__eyebrow {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.hero__title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.hero__subtitle {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 440px;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.hero__ghost {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero__illustration {
+  justify-self: center;
+}
+
+.hero__monster {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.hero__monster-body {
+  position: absolute;
+  inset: 40px 40px 0;
+  border-radius: 160px 160px 120px 120px;
+  background: radial-gradient(circle at 30% 20%, #27f0ff, #00c0ff 40%, #0093c7 80%);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.35);
+}
+
+.hero__monster-orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px dashed rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: hero-orbit 16s linear infinite;
+}
+
+.hero__monster-orbit span {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #ffd45b;
+  box-shadow: 0 0 0 6px rgba(255, 212, 91, 0.4);
+}
+
+.hero__monster-orbit span:nth-child(2) {
+  background: #ff6b9a;
+  box-shadow: 0 0 0 6px rgba(255, 107, 154, 0.4);
+  transform: translate(90px, -60px);
+}
+
+.hero__monster-orbit span:nth-child(3) {
+  background: #7bffb1;
+  box-shadow: 0 0 0 6px rgba(123, 255, 177, 0.4);
+  transform: translate(-80px, 50px);
+}
+
+.hero__wave {
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: 40px;
+  background-image: radial-gradient(circle at 50% -24px, transparent 24px, #f7fbff 25px);
+  background-size: 40px 40px;
+}
+
+@keyframes hero-orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1.2fr 1fr;
+  }
+
+  .hero__title {
+    font-size: 2.7rem;
+  }
+}
+

@@ -1,0 +1,65 @@
+.mobileBanner {
+  background: linear-gradient(135deg, #00c0ff, #00a3d5);
+  color: #ffffff;
+}
+
+.mobileBanner__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.mobileBanner__content h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.75rem;
+}
+
+.mobileBanner__content p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 430px;
+  margin-bottom: 1.25rem;
+}
+
+.mobileBanner__mockup {
+  justify-self: center;
+}
+
+.mobileBanner__phone {
+  width: 190px;
+  height: 340px;
+  border-radius: 32px;
+  background: linear-gradient(155deg, #ffffff, #cdefff);
+  box-shadow: 0 26px 55px rgba(0, 0, 0, 0.28);
+  position: relative;
+}
+
+.mobileBanner__phone::before,
+.mobileBanner__phone::after {
+  content: '';
+  position: absolute;
+  inset-inline: 18px;
+  border-radius: 24px;
+}
+
+.mobileBanner__phone::before {
+  top: 18px;
+  bottom: 18px;
+  background: radial-gradient(circle at 20% 20%, #00a3d5, #004b63);
+}
+
+.mobileBanner__phone::after {
+  top: 35px;
+  bottom: 35px;
+  background: radial-gradient(circle at 30% 30%, #ffd45b, #ff6b9a);
+  opacity: 0.3;
+}
+
+@media (min-width: 900px) {
+  .mobileBanner__inner {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
